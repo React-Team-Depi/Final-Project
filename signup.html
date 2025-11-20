@@ -1,0 +1,128 @@
+<!-- salma -->
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/css/countrySelect.min.css"
+    />
+    <link rel="stylesheet" href="assets\style\signup-style.css" />
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link
+      rel="icon"
+      href="assets/img/file_0000000012ac6243985d293aaa8aade3.png "
+      type="image/x-icon"
+    />
+    <title>التسجيل</title>
+  </head>
+
+  <body>
+    <div class="right">
+      <img src="assets/img/undraw_books_wxzz.svg" alt="" />
+    </div>
+    <div class="left">
+      <header class="header">
+        <img
+          src="assets\img\file_0000000012ac6243985d293aaa8aade3.png"
+          alt="logo"
+          height="100px"
+        />
+        <button id="toggle">
+          <img id="sun-icon" src="assets\img\sun-1.svg" alt="" />
+          <img
+            id="moon-icon"
+            src="assets\img\moon-half-right-5.svg"
+            alt=""
+            style="display: none"
+          />
+        </button>
+      </header>
+      <main>
+        <div class="hero-body">
+          <div class="main-text">
+            <h2>سجّل الآن وابدأ التعلّم</h2>
+            <p>
+              لديك حساب في المنصة ؟
+              <a href="sign.html">تسجيل الدخول </a>
+            </p>
+          </div>
+
+          <form id="signupForm">
+            <div class="input-container user-input">
+              <input
+                id="arName"
+                type="text"
+                name="arName"
+                class="input"
+                placeholder="الاسم الكامل"
+                required
+              />
+              <div id="arNameError" class="error"></div>
+            </div>
+            <div class="input-container user-input">
+              <input
+                id="enName"
+                type="text"
+                name="enName"
+                class="input"
+                placeholder="الاسم باللّغة الإنجليزيّة"
+                required
+              />
+              <div id="enNameError" class="error"></div>
+            </div>
+            <div class="input-container user-email">
+              <input
+                id="email"
+                type="email"
+                class="input"
+                name="email"
+                placeholder="البريد الالكتروني"
+                required
+              />
+              <div id="emailError" class="error"></div>
+            </div>
+            <div class="input-container user-pass">
+              <input
+                id="password"
+                type="password"
+                class="input"
+                name="password"
+                placeholder=" كلمة المرور"
+                required
+              />
+              <div id="passwordError" class="error"></div>
+            </div>
+
+            <div class="input-container dropdown-container">
+              <input id="country" name="country" type="text" />
+            </div>
+
+            <div class="input-container">
+              <div class="radio-container">
+                <label class="radio"
+                  >ذكر
+                  <input type="radio" name="gender" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio"
+                  >أنثى
+                  <input type="radio" name="gender" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div id="genderError" class="error"></div>
+            </div>
+            <div class="btn-container">
+              <button type="submit" class="submit-btn">سجّل الآن</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/js/countrySelect.min.js"></script>
+    <script src="assets\js\signup.js"></script>
+  </body>
+</html>
