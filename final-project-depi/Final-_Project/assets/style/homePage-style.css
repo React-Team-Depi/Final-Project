@@ -1,0 +1,167 @@
+:root {
+    --main-text: #1ABC9C;
+    --dark-text: #283252;
+    --light-text: #a2a5b9;
+    --main-bg-color: #F2F2F5;
+    --bg-color: #fafafa;
+    --div-bg: #fff;
+    --div-border: #d9d9d9;
+}
+
+body.dark {
+    --main-text: #797bf2;
+    --dark-text: #AAAAB3;
+    --light-text: #a2a5b9;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: "JannaLT-Regular", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-body-wrapper {
+    max-width: 1200px;
+    background-color: var(--bg-color);
+}
+
+/*message styling*/
+.msg-body {
+    color: var(--dark-text);
+    font-size: 14px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--div-border);
+    box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+}
+
+.msg-close-btn {
+    left: 12px;
+    top: 10px;
+    font-size: 12px;
+}
+
+.msg-btn{
+    padding: 8px 40px;
+    border: 1px solid var(--div-border);
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    transition: border-color 0.3s ease;
+}
+
+.msg-btn:hover{border-color: rgba(0,0,0,0.4);}
+
+/*main topics card holds المواضيع الرئيسية and مسارات التعلم*/
+.main-topics-card{
+    border: 1px solid var(--div-border);
+    border-radius: 8px;
+    background-color: var(--div-bg);
+    padding: 30px;
+}
+
+.main-topics-card-title{
+    color: var(--main-text);
+    padding-top: 10px;
+}
+
+/*topics-link holds img and text*/
+.topic-link{
+    min-height: 130px;
+    gap: 5px; 
+    font-weight: 600;
+    font-size: 14px;
+    transition: gap 0.5s ease;
+}
+
+/*diamond is the div that holdes image*/
+.diamond {
+  width: 46px;
+  height: 46px;
+  margin: 12px;
+  transform: rotate(45deg);       
+  overflow: hidden;               
+  border-radius: 8px;            
+}
+
+.diamond img {
+  width: 140%;
+  height: 140%;
+  transform: rotate(-45deg);
+  position: relative;
+  right: -20%;        
+  top: -20%;
+}
+
+.topic-link:hover{gap:12px;}
+
+.topic-link:hover .diamond {
+  border: 2px solid var(--main-text);
+  transition: border 0.3s;
+}
+
+/*has an effect on small screens where the too large text doesnt push the diamond up*/
+.topic-link p{
+    margin: 0px;
+    height: 40px;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.topic-link:hover p {color: var(--main-text);}
+
+.learning-item{
+    gap:20px;
+    color: var(--dark-text);
+}
+
+.learning-item .learning-img{
+    min-width:50px;
+    max-width:50px;
+    height:50px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.learning-item .arrow{
+    width:30px;
+    height:30px;
+    align-self: center;
+    transition: all 0.3s ease;
+}
+
+.learning-item .arrow:hover{
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+}
+
+.learning-text{
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.learning-item:hover .learning-title{
+    color: var(--main-text);
+    transition: all 0.3s ease;
+}
+
+.learning-item:hover .learning-img{border: 2px solid var(--main-text);}
+
+.tracks-btn{
+    color: var(--dark-text);
+    border: 1px solid var(--div-border);
+}
+
+.tracks-btn:hover{border-color: rgba(0,0,0,0.4);}
+
+.hourglass p{color: var(--light-text);}
+
+.hourglass a{
+    background-color: var(--main-text);
+    color:white;
+    transition: opacity 0.3s ease;
+}
+
+.hourglass a:hover{opacity: 0.8;}

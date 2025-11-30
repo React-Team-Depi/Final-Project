@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>نظام حجز مواعيد - متعدد اللغات</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container top">
+        <h1 id="title">نظام حجز المواعيد</h1>
+        <div class="muted" id="subtitle">في حال وجود أي استفسار، تواصل معي</div>
+        <button id="langBtn" style="width:auto">English</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="grid">
+        <aside class="card sidebar">
+          <div>
+            <label id="teacherLabel">اختر المدرس</label>
+            <select id="teacherSelect"></select>
+          </div>
+
+          <div style="margin-top: 12px">
+            <label id="detailsLabel">تفاصيل الحجز</label>
+            <input id="studentName" placeholder="اسم الطالب" />
+            <input
+              id="studentEmail"
+              placeholder="البريد الإلكتروني (اختياري)"
+              style="margin-top: 8px"
+            />
+            <textarea
+              id="notes"
+              rows="3"
+              placeholder="ملاحظات (اختياري)"
+              style="margin-top: 8px"
+            ></textarea>
+            <button id="confirmBtn" style="margin-top: 10px" disabled>
+              تأكيد الحجز
+            </button>
+          </div>
+
+          <div class="card" style="margin-top: 12px">
+            <div class="small" id="currentBookings">الحجوزات الحالية</div>
+            <div id="bookings" class="bookings-list"></div>
+            <button id="clearBtn" style="margin-top: 8px; background: #e55353">
+              مسح الحجوزات المحلية
+            </button>
+          </div>
+
+          <div
+            class="muted"
+            id="localNote"
+            style="margin-top: 10px; font-size: 13px"
+          >
+            هذه نسخة محلية: يتم حفظ الحجوزات في localStorage.
+          </div>
+        </aside>
+
+        <section>
+          <div class="card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 8px;
+              "
+            >
+              <div>
+                <label id="weekLabel">اختر بداية الأسبوع</label>
+                <input type="date" id="weekStart" />
+              </div>
+              <div class="small" id="calendarHint">
+                انقر على خانة الوقت لاختيارها. الأوقات المحجوزة تظهر بعلامة.
+              </div>
+            </div>
+
+            <div id="calendar" class="calendar" style="margin-top: 12px"></div>
+          </div>
+
+          <div class="card" style="margin-top: 12px">
+            <div class="small" id="downloadHint">
+              زر تنزيل ملف تقويم للحجز المختار
+            </div>
+            <button
+              id="downloadIcsBtn"
+              disabled
+              style="margin-top: 8px; background: #0c8a6f"
+            >
+              تنزيل ملف تقويم (.ics)
+            </button>
+          </div>
+        </section>
+      </div>
+
+    
+  
+
+      <footer id="footer">تم الإنشاء لمساعدتك على البدء — اطلب أي تعديل تريده</footer>
+    </main>
+
+    <!-- Popup -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <h3 id="popupTitle">✅ تم تأكيد الحجز</h3>
+        <p id="popupMsg">شكراً! تم حجز الموعد بنجاح.</p>
+        <button onclick="closeModal()" style="margin-top:10px">إغلاق</button>
+      </div>
+    </div>
+
+     
+    </script>
+  </body>
+</html>
