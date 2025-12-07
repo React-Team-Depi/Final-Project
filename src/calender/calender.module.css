@@ -1,0 +1,204 @@
+    :root {
+      --accent: #0b6efd;
+      --bg: #f7f9fc;
+      --card: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Inter, system-ui, Arial;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #111;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffffff00, #0d0b9711);
+      padding: 18px 20px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 18px auto;
+      padding: 16px;
+    }
+
+    .top {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 6px 18px rgba(11, 110, 253, 0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    select,
+    input,
+    button,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #e6eef9;
+      background: white;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      background: var(--accent);
+      color: white;
+      padding: 10px 12px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .teacher-list button {
+      display: block;
+      text-align: right;
+      margin-bottom: 8px;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .day {
+      background: #fbfdff;
+      border-radius: 8px;
+      padding: 8px;
+      min-height: 120px;
+    }
+
+    .day h4 {
+      margin: 0 0 8px 0;
+      font-size: 13px;
+    }
+
+    .slot {
+      display: block;
+      border-radius: 6px;
+      padding: 6px 8px;
+      margin-bottom: 6px;
+      border: 1px dashed #dfeefe;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    .slot.taken {
+      opacity: 0.45;
+      text-decoration: line-through;
+      cursor: not-allowed;
+      border-style: solid;
+    }
+
+    .slot.selected {
+      background: linear-gradient(90deg, var(--accent), #60a5fa);
+      color: white;
+      border: 0;
+    }
+
+    .sidebar .small {
+      font-size: 13px;
+      color: #556;
+    }
+
+    .bookings-list {
+      margin-top: 12px;
+    }
+
+    .booking-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-radius: 8px;
+      background: #fbfbff;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: #667;
+    }
+
+    .muted {
+      color: #657;
+    }
+
+    @media (max-width: 880px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .calendar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Popup Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 350px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      animation: pop 0.3s ease;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
